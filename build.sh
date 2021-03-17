@@ -16,8 +16,8 @@ main() {
     # Write the chapters to separate files.
     for i in "${!chapter[@]}"; do
         : "${chapter[$i]/$'\n'*}"; : "${_/\# }"; : "${_,,}"
-        printf '%s\n' "${chapter[$i]}" > "manuscript/chapter${i}.txt"
-        printf '%s\n' "chapter${i}.txt" >> "manuscript/Book.txt"
+        printf '%s\n' "${chapter[$i]}" > "manuscript/chapter${i}.sh"
+        printf '%s\n' "chapter${i}.sh" >> "manuscript/Book.txt"
     done
 }
 
